@@ -24,4 +24,6 @@ export const CustomButton = styled.button`
     width: 100%;
     max-width: 215px;
     outline: none;
+    margin-left: auto !important;
+    margin-right: auto !important;
 `;
