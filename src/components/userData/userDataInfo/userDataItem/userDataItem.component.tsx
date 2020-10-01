@@ -20,8 +20,8 @@ export const UserDataItemComponent = (props: PropsType) => {
 
     const svgIcon = dataType === 'email' ? <Email/> : <Phone/>;
 
-    const emailInfo = email.length ? email : 'Укажите ваш e-mail';
-    const phoneInfo = phone.length ? phone : 'Укажите номер телефона';
+    const emailInfo = email ? email : 'Укажите ваш e-mail';
+    const phoneInfo = phone ? phone : 'Укажите номер телефона';
 
     const infoData = dataType === 'email' ? emailInfo : phoneInfo;
 

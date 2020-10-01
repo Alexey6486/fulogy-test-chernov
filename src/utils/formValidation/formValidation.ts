@@ -4,12 +4,19 @@ export const fieldRequired = (value: string) => {
     }
     return "Field is required";
 };
-export const minLength = (minLength: number) => (value: string) => {
-    if (value && value.length < minLength) {
-        return 'Password length must be 8 symbols or more.'
-    } else if (value && value.length >= minLength) {
+export const phoneFormat = (value: string) => {
+    if (value && value.match(/^8\d{10}$/)) {
         return undefined;
-    } else {
-        return 'Field is required.'
+    } else if (value && !value.match(/^8\d{10}$/)) {
+        return "Enter 8 then 10 numbers 1234567890";
     }
-}
+    return undefined;
+};
+export const emailFormat = (value: string) => {
+    if (value && value.match(/^[a-zA-Z0-9_.+-]+@[a-z]+\.(ru|com)$/)) {
+        return undefined;
+    } else if (value && !value.match(/^[a-zA-Z0-9_.+-]+@[a-z]+\.(ru|com)$/)) {
+        return "Email format myemail@mail.ru/com";
+    }
+    return undefined;
+};

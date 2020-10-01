@@ -11,7 +11,7 @@ export const UserInfoComponent = () => {
     const {imageUrl_small, lastName, firstName} = userDataState;
 
     const userImage = imageUrl_small.length ? <img src={imageUrl_small} alt={'user image'}/> : <img src={UserImage} alt={'user image'}/>;
-    const firstNameEdited = firstName.slice(0,1).toUpperCase();
+    const firstNameEdited = firstName ? firstName.slice(0,1).toUpperCase() : '';
 
     return (
         <UserInfo>

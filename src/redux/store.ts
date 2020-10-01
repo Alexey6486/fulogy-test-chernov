@@ -9,11 +9,11 @@ export const sagaMiddleware = createSagaMiddleware();
 
 let middleware: Array<any> = [sagaMiddleware];
 
-if (process.env.NODE_ENV === 'development') {
-    middleware = [...middleware];
-} else {
-    middleware = [...middleware];
-}
+// if (process.env.NODE_ENV === 'development') {
+//     middleware = [...middleware];
+// } else {
+//     middleware = [...middleware];
+// }
 
 export const rootReducers = combineReducers({
     userDataReducer,
