@@ -1,5 +1,5 @@
 import React from "react";
-import {AppContent} from "../../../../pages/index.styles";
+import {AppContent} from "../../../../styles/index.styles";
 import {Container} from "../../../../styles/global.styles";
 import {HeaderComponent} from "../../header/header.component";
 import {PageInfoComponent} from "../../pageInfo/pageInfo.component";
