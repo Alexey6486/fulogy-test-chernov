@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 export const ButtonsSuccessWrap = styled.div`
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     & > button {
+        margin-left: auto;
+        margin-right: auto;
+        
         :not(:last-child) {
             margin-bottom: 28px;
         }

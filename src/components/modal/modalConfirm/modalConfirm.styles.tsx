@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ButtonsConfirmWrap = styled.div`
     width: 100%;
 
-
     & > button {
         margin-left: auto;
         margin-right: auto;

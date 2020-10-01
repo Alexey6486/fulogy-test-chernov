@@ -1,7 +1,8 @@
 import React from "react";
 import {ModalComponent} from "../modal.component";
 import {CustomButtonComponent} from "../../customButton/customButton.component";
-import {ButtonsConfirmWrap, ModalConfirmTitle} from "./modalConfirm.styles";
+import {ButtonsConfirmWrap} from "./modalConfirm.styles";
+import s from './modalConfirm.module.css'
 
 type PropsType = {
     onCloseConfirm: () => void
@@ -14,7 +15,7 @@ export const ModalConfirmComponent = (props: PropsType) => {
 
     return (
         <ModalComponent onClose={onCloseConfirm}>
-            <ModalConfirmTitle>Сохранить изменения?</ModalConfirmTitle>
+            <div className={s.modalTitle}>Сохранить изменения?</div>
             <ButtonsConfirmWrap>
                 <CustomButtonComponent type={'button'} onClick={onConfirm}>
                     Сохранить
