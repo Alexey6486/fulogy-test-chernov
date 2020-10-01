@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ButtonsWrap = styled.div`
+export const ButtonsSuccessWrap = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
