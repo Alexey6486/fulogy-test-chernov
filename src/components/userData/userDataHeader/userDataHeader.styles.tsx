@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const UserDataHeader = styled.div`
@@ -54,7 +54,6 @@ export const UserDataImgWrap = styled.div`
         margin-right: 10px;
     }
 `;
-
 export const UserDataName = styled.div`
     display: flex;
     align-items: center;
@@ -75,7 +74,19 @@ export const UserDataName = styled.div`
         font-size: 14px;
     }
 `;
-
+export const EditInnerLink = styled.a`
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+`;
 export const UserDataEdit = styled(Link)`
     cursor: pointer;
     display: flex;
@@ -95,7 +106,6 @@ export const UserDataEditTitle = styled.div`
         display: none;
     }
 `;
-
 export const SvgWrap = styled.div`
     margin-left: 8px;
     height: 18px;

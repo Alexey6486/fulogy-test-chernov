@@ -7,11 +7,13 @@ interface ChildrenType {
 type PropsType = ChildrenType & {
     bgColor?: string
     onClick?: () => void
+    type?: string
+    txtColor?: string
 }
 
 export const CustomButtonComponent = (props: PropsType) => {
 
-    const {children, onClick, bgColor} = props;
+    const {children, onClick, bgColor, type, txtColor} = props;
 
     const onClickHandler = () => {
         if (onClick) {
@@ -20,7 +22,7 @@ export const CustomButtonComponent = (props: PropsType) => {
     }
 
     return (
-        <CustomButton onClick={onClickHandler} bgColor={bgColor}>
+        <CustomButton onClick={onClickHandler} bgColor={bgColor} type={type} txtColor={txtColor}>
             {children}
         </CustomButton>
     )

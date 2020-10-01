@@ -124,3 +124,4 @@ export const SvgWrap = styled.div`
         display: none;
     }
 `;
+

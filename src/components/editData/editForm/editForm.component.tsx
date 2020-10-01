@@ -1,4 +1,4 @@
-import React, {PropsWithChildren, useEffect} from "react";
+import React, {PropsWithChildren, useEffect, useState} from "react";
 import {
     BtnWrap,
     EditFormBlock, EditFormFieldsContainer,
@@ -15,6 +15,8 @@ import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {CustomButtonComponent} from "../../customButton/customButton.component";
 import {fieldRequired} from "../../../utils/formValidation/formValidation";
 import {Input} from "../../../utils/formFields/formFields.component";
+import { ModalConfirmComponent } from "src/components/modal/modalConfirm/modalConfirm.component";
+import { ModalSuccessComponent } from "src/components/modal/modalSuccess/modalSuccess.component";
 const Email = require('../../../../public/assets/icons/at.svg');
 const Phone = require('../../../../public/assets/icons/phone.svg');
 const Name = require('../../../../public/assets/icons/name.svg');
@@ -33,8 +35,17 @@ export const EditFormComponent = () => {
 
     const fullName = `${lastName} ${firstName} ${patronymic}`;
 
-    const onSubmit = (editFormData: EditFormType) => {
+    const [confirm, setConfirm] = useState(false);
+    const [success, setSuccess] = useState(false);
 
+    const onSubmit = (editFormData: EditFormType) => {
+        setConfirm(true);
+    };
+    const onCloseConfirm = () => setConfirm(false);
+    const onCloseSuccess = () => setSuccess(false);
+    const onConfirm = () => {
+        setConfirm(false);
+        setSuccess(true);
     }
 
     useEffect(() => {
@@ -44,6 +55,8 @@ export const EditFormComponent = () => {
     return (
         <EditFormBlock>
             <ReduxEditForm onSubmit={onSubmit} initialValues={{fullName, email, phone}}/>
+            { confirm && <ModalConfirmComponent onCloseConfirm={onCloseConfirm} onConfirm={onConfirm}/> }
+            { success && <ModalSuccessComponent onCloseSuccess={onCloseSuccess}/> }
         </EditFormBlock>
     )
 }
@@ -80,13 +93,13 @@ const EditForm: React.FC<InjectedFormProps<EditFormType>> = (props: PropsWithChi
                     </SvgWrap>
                     <FieldGroup>
                         <Field component={Input} name={'phone'} type={'number'} placeholder={'Укажите номер телефона'}
-                               id={'phone'} validate={[fieldRequired]}/>
+                               id={'phone'}/>
                         <EditFormLabel>Номер телефона</EditFormLabel>
                     </FieldGroup>
                 </FieldGroupWrap>
             </EditFormFieldsContainer>
             <BtnWrap>
-                <CustomButtonComponent bgColor={'#01BDA7'}>
+                <CustomButtonComponent type={'submit'} bgColor={'#01BDA7'}>
                     Сохранить изменения
                 </CustomButtonComponent>
             </BtnWrap>
