@@ -1,8 +1,8 @@
 import React from "react";
-import {ModalContent, ModalScreen, ModalTitle, SvgWrap} from "./modal.styles";
+import {ModalContent, ModalScreen, SvgWrap} from "./modal.styles";
 const Close = require('../../../public/assets/icons/cross.svg');
 
-export const ModalComponent = ({children, onClose, title}) => {
+export const ModalComponent = ({children, onClose}) => {
 
     const onCloseHandler = () => {
         onClose();
@@ -14,7 +14,6 @@ export const ModalComponent = ({children, onClose, title}) => {
                 <SvgWrap onClick={onCloseHandler}>
                     <Close/>
                 </SvgWrap>
-                <ModalTitle>{title}</ModalTitle>
                 {children}
             </ModalContent>
         </ModalScreen>
