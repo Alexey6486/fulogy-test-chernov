@@ -2,7 +2,7 @@ import React from "react";
 import {ModalComponent} from "../modal.component";
 import {CustomButtonComponent} from "../../customButton/customButton.component";
 import { ButtonsSuccessWrap } from "./modalSuccess.styles";
-import {ModalSuccessTitle} from "./modalSuccess.styles";
+import s from "./modalSuccess.module.css";
 
 type PropsType = {
     onCloseSuccess: () => void
@@ -14,7 +14,7 @@ export const ModalSuccessComponent = (props: PropsType) => {
 
     return (
         <ModalComponent onClose={onCloseSuccess}>
-            <ModalSuccessTitle>Данные успешно сохранены</ModalSuccessTitle>
+            <div className={s.modalTitle}>Данные успешно сохранены</div>
             <ButtonsSuccessWrap>
                 <CustomButtonComponent type={'button'} onClick={onCloseSuccess}>
                     Хорошо
