@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const ButtonsSuccessWrap = styled.div`
     width: 100%;
+    display: block !important;
 
     & > button {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
         
         :not(:last-child) {
             margin-bottom: 28px;
