@@ -54,9 +54,9 @@ export const FieldGroup = styled.div`
         border: 1px solid rgba(49, 49, 49, 0.4);
         border-radius: 10px;
         padding: 0 10px;
-        font-family: Open Sans;
+        font-family: 'Open Sans';
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 14px;
         line-height: 19px;
         color: #313131;

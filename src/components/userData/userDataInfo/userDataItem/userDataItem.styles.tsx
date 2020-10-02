@@ -6,9 +6,9 @@ export const UserDataItem = styled.div`
     display: flex;
     align-items: center;
     padding: 0 77px;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1;
     color: #313131;

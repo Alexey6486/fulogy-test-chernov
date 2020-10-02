@@ -58,7 +58,7 @@ export const UserDataName = styled.div`
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
@@ -78,7 +78,7 @@ export const EditInnerLink = styled.a`
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -91,7 +91,7 @@ export const UserDataEdit = styled(Link)`
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

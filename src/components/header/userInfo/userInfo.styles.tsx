@@ -34,7 +34,7 @@ export const UserName = styled.div`
     align-items: center;
     height: 40px;
     color: #ffffff;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

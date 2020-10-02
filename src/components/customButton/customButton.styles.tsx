@@ -6,7 +6,7 @@ interface BgColor {
 }
 
 export const CustomButton = styled.button`
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

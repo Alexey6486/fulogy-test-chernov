@@ -11,7 +11,7 @@ export const BreadcrumbsComponent = (props: PropsType) => {
 
     const pagesMap = pagesArr.map((page, idx) => {
         if (pagesArr.length > 1 && idx != pagesArr.length - 1) {
-            return <LinkCrumb>{page}/</LinkCrumb>
+            return <LinkCrumb key={page}>{page}/</LinkCrumb>
         } else if (pagesArr.length > 1 && idx === pagesArr.length - 1) {
             return <CurrentCrumb key={page}>{page}</CurrentCrumb>
         } else {

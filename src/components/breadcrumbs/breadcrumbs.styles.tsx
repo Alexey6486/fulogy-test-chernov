@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Breadcrumbs = styled.div`
     display: flex;
     align-items: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1;
     color: #ffffff;
@@ -19,9 +19,9 @@ export const LinkCrumb = styled.a`
     align-items: center;
     color: #ffffff;
     cursor: pointer;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1;
     text-decoration: none;

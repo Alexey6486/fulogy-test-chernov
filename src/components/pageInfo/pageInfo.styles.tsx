@@ -13,7 +13,7 @@ export const PageTitle = styled.div`
     width: 100%;
     text-transform: uppercase;
     color: #ffffff;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;

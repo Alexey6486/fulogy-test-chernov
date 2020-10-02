@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const EditFormError = styled.div`
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     color: #EB5757;
