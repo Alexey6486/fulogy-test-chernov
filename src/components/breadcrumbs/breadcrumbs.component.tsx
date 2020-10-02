@@ -1,8 +1,13 @@
 import React from "react";
 import {Breadcrumbs, CurrentCrumb, LinkCrumb} from "./breadcrumbs.styles";
+import Link from "next/link";
 
+type PagesArrType = {
+    page: string
+    url: string
+}
 type PropsType = {
-    pagesArr: String[];
+    pagesArr: PagesArrType[];
 }
 
 export const BreadcrumbsComponent = (props: PropsType) => {
@@ -11,11 +16,11 @@ export const BreadcrumbsComponent = (props: PropsType) => {
 
     const pagesMap = pagesArr.map((page, idx) => {
         if (pagesArr.length > 1 && idx != pagesArr.length - 1) {
-            return <LinkCrumb key={page}>{page}/</LinkCrumb>
+            return <Link href={page.url} key={page.page}><LinkCrumb>{page.page}/</LinkCrumb></Link>
         } else if (pagesArr.length > 1 && idx === pagesArr.length - 1) {
-            return <CurrentCrumb key={page}>{page}</CurrentCrumb>
+            return <CurrentCrumb key={page.page}>{page.page}</CurrentCrumb>
         } else {
-            return <CurrentCrumb key={page}>{page}</CurrentCrumb>
+            return <CurrentCrumb key={page.page}>{page.page}</CurrentCrumb>
         }
     })
 
