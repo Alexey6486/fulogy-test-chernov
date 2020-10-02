@@ -3,6 +3,7 @@ import {AccountPageLayout} from "../src/components/layouts/accountPageLayout/acc
 import {UserDataInfoComponent} from "../src/components/userData/userDataInfo/userDataInfo.component";
 import {initSagaSetUserDataAC} from "../src/redux/userDataReducer";
 import {useDispatch} from "react-redux";
+import Head  from "next/head";
 
 const Home = () => {
 
@@ -16,9 +17,14 @@ const Home = () => {
     }, [])
 
     return (
-        <AccountPageLayout>
-            <UserDataInfoComponent/>
-        </AccountPageLayout>
+        <>
+            <Head>
+                <title>User Account</title>
+            </Head>
+            <AccountPageLayout>
+                <UserDataInfoComponent/>
+            </AccountPageLayout>
+        </>
     )
 };
 

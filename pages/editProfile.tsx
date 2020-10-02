@@ -1,12 +1,18 @@
 import {AccountPageLayout} from "../src/components/layouts/accountPageLayout/accountPageLayout";
 import React from "react";
-import { EditDataComponent } from "src/components/editData/editData.component";
+import {EditDataComponent} from "src/components/editData/editData.component";
+import Head from "next/head";
 
 const EditProfile = () => {
     return (
-        <AccountPageLayout>
-            <EditDataComponent/>
-        </AccountPageLayout>
+        <>
+            <Head>
+                <title>User Account | Edit</title>
+            </Head>
+            <AccountPageLayout>
+                <EditDataComponent/>
+            </AccountPageLayout>
+        </>
     )
 };
 
