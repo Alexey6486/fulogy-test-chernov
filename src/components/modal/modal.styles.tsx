@@ -1,5 +1,25 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
+const Dropdown = keyframes`
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+const Dropup = keyframes`
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+`;
 export const ModalScreen = styled.div`
     height: 100vh;
     width: 100vw;
@@ -21,6 +41,8 @@ export const ModalContent = styled.div`
     position: relative;
     width: 100%;
     max-width: 600px;
+    animation: ${Dropdown} 400ms forwards;
+    animation-timing-function: cubic-bezier(0.57, 0.21, 0.29, 1.57);
     
     @media all and (max-width: 576px) {
         padding: 69px 30px 56px;
