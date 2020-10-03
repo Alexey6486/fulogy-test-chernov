@@ -9,7 +9,7 @@ export const EditFormError = styled.div`
     color: #EB5757;
     padding-left: 15px;
     position: absolute;
-    bottom: -17px;
+    top: 100%;
     left: 0;
     
     & + input {

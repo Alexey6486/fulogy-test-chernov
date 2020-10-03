@@ -1,20 +1,18 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: `/api/postData`,
+    baseURL: `/api/hide`,
 })
 
 export const api = {
-    _postData(data) {
-        return instance.post(``, data)
-            .then(res => {
-                console.log(res.config.data)
+    postData(payload) {
+        return instance
+            .post('', payload)
+            .then(response => {
+                console.log(response.data)
             })
             .catch(error => {
-                console.error(error)
+                console.log(error.message);
             })
-    },
-    postDataReq(data) {
-        return this._postData(``, data)
-    },
+    }
 }

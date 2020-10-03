@@ -65,7 +65,7 @@ export const EditFormComponent = () => {
         setConfirm(false);
         setSuccess(true);
         localStorage.setItem('userDataTestChernov', JSON.stringify(formData));
-        api.postDataReq(formData)
+        api.postData(formData);
     }
 
     useEffect(() => {
